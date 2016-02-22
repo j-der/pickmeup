@@ -1,10 +1,14 @@
 //= require ./SearchBar.js
+//= require ./NavBar.js
 
 var SplashPage = React.createClass({
 
   render: function(){
     return (
-      <p>hi there</p>
+      <div>
+        <NavBar />
+        <SearchBar />
+      </div>
     );
   }
 
