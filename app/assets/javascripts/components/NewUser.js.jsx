@@ -2,21 +2,22 @@ var NewUser = React.createClass({
 
   getInitialState: function() {
     return {
-
+      formClass: hidden
     }
   },
 
-
-
-  render: function(){
+  displayForm: function() {
+    this.setState({
+      formClass: view
+    })
     return (
-      <form action="/index" method="POST">
+      <form class="{this.displayForm}" action="/index" method="POST">
         <div>
           <label for="first_name">First name:</label>
           <input type="text" id="first_name" placeholder="First name" />
         </div>
         <div>
-          <label for="last_name">First name:</label>
+          <label for="last_name">Last name:</label>
           <input type="text" id="last_name" placeholder="Last name" />
         </div>
         <div>
@@ -35,6 +36,14 @@ var NewUser = React.createClass({
           <button type="submit">Submit</button>
         </div>
       </form>
+    )
+  },
+
+  render: function(){
+    return (
+      <div>
+        {this.displayForm}
+      </div>
     );
   }
 
