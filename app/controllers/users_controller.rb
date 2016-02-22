@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def index
+    @users = User.all
     # overwrite the default render of '/users/index' and render
     # 'ParentComponent' with a property of users
     render component: 'ParentComponent', props: { users: User.all }
@@ -9,26 +10,25 @@ class UsersController < ApplicationController
   end
 
   def new
-    render component: 'NewUser'
     @user = User.new
   end
 
   def create
-    render component: 'NewUser'
+
     @user = User.new(user_params)
 
     if @user.save
       session[:user_id] = @user.id
       redirect_to rides_path, notice: "Welcome to Pick Me Up, #{@user.first_name}! Buckle up, and let's go!"
     else
-      render :new
+      redirect_to rides_path, notice: "Sign up failed!"
     end
   end
 
   protected
 
   def user_params
-    params.require(:user).permit(:email, :first_name, :last_name, :password, :password_confirmation)
+    params.require(:user).permit(:email, :first_name, :last_name, :password, :password_confirmation, :authenticity_token)
   end
 
 end
