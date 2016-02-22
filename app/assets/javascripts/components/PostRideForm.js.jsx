@@ -1,62 +1,28 @@
 var PostRideForm = React.createClass({
+
   render: function() {
     return (
-      <form method="POST" action="/rides" role="form">
+      <form method="POST" action="/rides">
         <div>
-          <label>Your route: </label>
-            <input type="text" name="title" />
+          <label htmlFor="title">Your route: </label>
+            <input type="text" name="ride[title]" />
         </div>
         <div>
-          <label>Details: </label>
-            <input type="textarea" name="details" />
+          <label htmlFor="details">Details: </label>
+            <input type="textarea" name="ride[details]" />
         </div>
         <div>
-          <label>Number of seats available: </label>
-            <input type="number" name="seats" min="1" max="6" />
+          <label htmlFor="seats">Number of seats available: </label>
+            <input type="number" name="ride[seats]" min="1" max="6" />
         </div>
         <div>
-          <label></label>
-            <input type="submit" name="submit" value="let's go!" />
+        <input type='hidden' name='authenticity_token' value={this.props.authenticity_token} />
+        </div>
+        <div>
+          <button type="submit">Lets roll</button>
         </div>
       </form>
     );
   }
+
 });
-
-// <form method="POST" action="/posts" role="form" id="new_post_form">
-//       <div class="form-group">
-//         <label class="col-xs-3 control-label form-width">Type of offer</label>
-//         <select class="new-post-form" name="category">
-//           <option name="goods" value="goods">Goods</option>
-//           <option name="services" value="skills">Skills</option>
-//         </select>
-//       </div>
-
-//       <div class="form-group">
-//         <label class="col-xs-3 control-label">Title: </label>
-//         <input class="new-post-form" type="text" name="title" placeholder="Tagline for your offer">
-//       </div>
-
-//       <div class="form-group">
-//         <label class="col-xs-3 control-label">Description: </label>
-//         <input class="new-post-form" id="new-post-form-desc" type="text" name="description" placeholder="Details of your offer">
-//       </div>
-
-//       <div class="form-group">
-//         <label class="col-xs-3 control-label">Add an image! </label>
-//         <input class="new-post-form" type="text" name="image_url" placeholder="URL to the image">
-//       </div>
-
-//       <div class="form-group">
-//         <input type="hidden" name="latitude" id="lat">
-//       </div>
-
-//       <div class="form-group">
-//         <input type="hidden" name="longitude" id="lng">
-//       </div>
-
-//       <div class="form-group">
-//         <label class="col-xs-3 control-label"></label>
-//         <input type="submit" name"submit" value="Haggle it!">
-//       </div>
-//     </form>
