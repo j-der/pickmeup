@@ -5,18 +5,18 @@ class Ride < ActiveRecord::Base
 
   validates :origin_latitude,
     presence: true,
-    numericality: { only_integer: true }
+    numericality: :true
 
   validates :origin_longitude,
     presence: true,
-    numericality: { only_integer: true }
+    numericality: :true
 
   validates :destination_latitude,
     presence: true,
-    numericality: { only_integer: true }
+    numericality: :true
 
   validates :destination_longitude,
     presence: true,
-    numericality: { only_integer: true }
+    numericality: :true
 
 end
