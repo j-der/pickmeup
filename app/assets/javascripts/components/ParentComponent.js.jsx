@@ -1,5 +1,6 @@
 //= require ./FirstComponent.js
 //= require ./SecondComponent.js
+//= require ./NewUser.js
 
 var ParentComponent = React.createClass({
   render: function() {
@@ -11,6 +12,7 @@ var ParentComponent = React.createClass({
         <FirstComponent users={this.props.users}/>
         {/* when using JS in JSX (above), must be contained in {} */}
         <SecondComponent />
+        <NewUser view={this.props.view} />
       </div>
     );
   }
