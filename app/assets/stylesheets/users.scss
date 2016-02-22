@@ -16,3 +16,19 @@
   max-height: 100%;
   float: left;
 }
+
+#origin-field {
+  display: block;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #eeeeee;
+  border-radius: 0;
+  background: none;
+  height: 60px;
+  width: 60%;
+  margin: auto;
+}
+
+#origin-field:focus {
+  outline: none;
+}
