@@ -12,7 +12,7 @@ var ParentComponent = React.createClass({
         <FirstComponent users={this.props.users}/>
         {/* when using JS in JSX (above), must be contained in {} */}
         <SecondComponent />
-        <NewUser />
+        <NewUser view={this.props.view} />
       </div>
     );
   }

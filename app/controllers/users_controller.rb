@@ -3,9 +3,9 @@ class UsersController < ApplicationController
   def index
     # overwrite the default render of '/users/index' and render
     # 'ParentComponent' with a property of users
-    # render component: 'ParentComponent', props: { users: User.all }
+    render component: 'ParentComponent', props: { users: User.all }
     # render component: 'UserTweet', props: { users: User.all }
-    render component: 'SearchBar'
+    # render component: 'SearchBar'
   end
 
   def new
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    render component: 'NewUser', props: {}
+    render component: 'NewUser', props: { view: hidden }
     @user = User.new(user_params)
 
     if @user.save
