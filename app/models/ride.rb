@@ -4,15 +4,19 @@ class Ride < ActiveRecord::Base
   has_many :seats
 
   validates :origin_latitude,
-    presence:,  numericality: true
+    presence: true,
+    numericality: true
 
   validates :origin_longitude,
-    presence:,  numericality: true
+    presence: true,
+    numericality: true
 
   validates :destination_latitude,
-    presence:,  numericality: true
+    presence: true,
+    numericality: true
 
   validates :destination_longitude,
-    presence:,  numericality: true
+    presence: true,
+    numericality: true
 
 end
