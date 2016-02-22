@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    render component: 'NewUser', props: { view: hidden }
+    render component: 'NewUser'
     @user = User.new(user_params)
 
     if @user.save
