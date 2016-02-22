@@ -5,7 +5,8 @@ class UsersController < ApplicationController
     # 'ParentComponent' with a property of users
     # render component: 'ParentComponent', props: { users: User.all }
     # render component: 'UserTweet', props: { users: User.all }
-    render component: 'SearchBar'
+    # render component: 'SearchBar'
+    render component: 'SplashPage'
   end
 
 end
