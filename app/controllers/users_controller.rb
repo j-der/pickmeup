@@ -7,10 +7,12 @@ class UsersController < ApplicationController
   end
 
   def new
+    render component: 'NewUser'
     @user = User.new
   end
 
   def create
+    render component: 'NewUser', props: {}
     @user = User.new(user_params)
 
     if @user.save
