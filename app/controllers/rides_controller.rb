@@ -9,7 +9,6 @@ class RidesController < ApplicationController
 	end
 
 	def create
-		# binding.pry
 		@ride = Ride.new(ride_params)
 
 		if @ride.save
