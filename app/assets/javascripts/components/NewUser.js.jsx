@@ -7,27 +7,30 @@ var NewUser = React.createClass({
   displayForm: function() {
     if (this.state.showForm) {
       return (
-        <form action="/index" method="POST">
+        <form action="/users" method="POST">
           <div>
             <label htmlFor="first_name">First name:</label>
-            <input type="text" id="first_name" placeholder="First name" />
+            <input type="text" name="user[first_name]" id="first_name" placeholder="First name" />
           </div>
           <div>
             <label htmlFor="last_name">Last name:</label>
-            <input type="text" id="last_name" placeholder="Last name" />
+            <input type="text" name="user[last_name]" id="last_name" placeholder="Last name" />
           </div>
           <div>
             <label htmlFor="email">Email:</label>
-            <input type="text" id="email" placeholder="Email" />
+            <input type="text" name="user[email]" id="email" placeholder="Email" />
           </div>
           <div>
             <label htmlFor="password">Choose a password:</label>
-            <input type="password" id="password" placeholder="Password" />
+            <input type="password" name="user[password]" id="password" placeholder="Password" />
           </div>
           <div>
-            <label htmlFor="password-confirmation">Confirm your password:</label>
-            <input type="password" id="password-confirmation" placeholder="Confirm your password" />
+            <label htmlFor="password_confirmation">Confirm your password:</label>
+            <input type="password" name="user[password_confirmation]" id="password_confirmation" placeholder="Confirm your password" />
           </div>
+          <div>
+        <input type="hidden" name="authenticity_token" value={this.props.authenticity_token} />
+        </div>
           <div>
             <button type="submit">Submit</button>
           </div>
