@@ -1,6 +1,6 @@
 var PostRideForm = React.createClass({
 
-  render: function() {
+  displayForm: function() {
     return (
       <form method="POST" action="/rides">
         <div>
@@ -22,6 +22,14 @@ var PostRideForm = React.createClass({
           <button type="submit">Let&#39;s roll</button>
         </div>
       </form>
+    );
+  },
+
+  render: function() {
+    return (
+      <div>
+        <button>Post a Ride</button>
+      </div>
     );
   }
 
