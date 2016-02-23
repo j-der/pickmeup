@@ -5,11 +5,11 @@ class RidesController < ApplicationController
 	end
 
 	def new
-		# render component: 'PostRideForm'
 		@ride = Ride.new
 	end
 
 	def create
+		# binding.pry
 		@ride = Ride.new(ride_params)
 
 		if @ride.save
@@ -24,7 +24,7 @@ class RidesController < ApplicationController
 
 	def ride_params
 		params.require(:ride).permit(
-			:title, :details, :seats, :authenticity_token
+			:title, :details, :available_seats, :authenticity_token
 			)
 	end
 
