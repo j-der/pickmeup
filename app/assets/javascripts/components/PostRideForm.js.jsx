@@ -1,7 +1,12 @@
 var PostRideForm = React.createClass({
 
-  render: function() {
-    return (
+  getInitialState: function() {
+    return {showForm: false}
+  },
+
+  displayForm: function() {
+    if (this.state.showForm) {
+      return (
       <form method="POST" action="/rides" className="modal-content">
       <div>
         <label htmlFor="title">Your route: </label>
@@ -22,6 +27,29 @@ var PostRideForm = React.createClass({
         <button type="submit">Let&#39;s roll</button>
       </div>
     </form>
+      )
+    }
+  },
+
+  toggleForm: function() {
+    if (this.state.showForm) {
+      this.setState({
+        showForm: false
+      })
+    }
+    else {
+      this.setState({
+        showForm: true
+      })
+    }
+  },
+
+  render: function(){
+    return (
+      <div>
+        <button className="post-ride-button" onClick={this.toggleForm}>Post a Ride</button>
+        {this.displayForm()}
+      </div>
     );
   }
 
