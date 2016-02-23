@@ -7,14 +7,14 @@ var LogInForm = React.createClass({
   displayLogInForm: function() {
     if (this.state.showForm) {
       return (
-        <form action="/users" method="POST">
+        <form action="/sessions" method="POST">
           <div>
             <label htmlFor="email">Email:</label>
             <input type="text" name="user[email]" placeholder="Email" />
           </div>
           <div>
             <label htmlFor="password">Password:</label>
-            <input type="text" name="user[password]" placeholder="Password" />
+            <input type="password" name="user[password]" placeholder="Password" />
           </div>
           <div>
             <button type="submit">Let's Roll</button>
