@@ -5,25 +5,26 @@ class RidesController < ApplicationController
 	end
 
 	def new
-		render component: 'PostRideForm'
 		@ride = Ride.new
 	end
 
 	def create
-		@ride = Ride.new(title: params[:title])
+		@ride = Ride.new(ride_params)
 
 		if @ride.save
-    	render component: 'ParentComponent', props: { users: User.all }
+    	redirect_to users_path, notice: "#{@ride.title} was posted successfully!"
     	return
 		else
 			render :new
 		end
 	end
 
-	protected
+	protected	
 
 	def ride_params
-		params.require(:ride).permit(:title, :details, :seats, :authenticity_token)
+		params.require(:ride).permit(
+			:title, :details, :available_seats, :authenticity_token
+			)
 	end
 
 end
