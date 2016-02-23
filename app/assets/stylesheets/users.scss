@@ -17,6 +17,21 @@
   float: left;
 }
 
+.nav-bar {
+  height: 80px;
+  background: lightblue;
+}
+
+.log-in-button {
+  display: block;
+  float: right;
+}
+
+.sign-up-button {
+  display: block;
+  float: right;
+}
+
 #origin-field {
   display: block;
   box-shadow: none;
@@ -27,6 +42,8 @@
   height: 60px;
   width: 60%;
   margin: auto;
+  position: absolute;
+  top: 70%;
 }
 
 #origin-field:focus {

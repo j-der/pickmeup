@@ -10,9 +10,11 @@ var SearchBar = React.createClass({
 
   render: function(){
     return (
-      <div id="splash-input">
-        <input id="origin-field" placeholder={this.state.placeholder} onClick={this.changePlaceholder}/>
-      </div>
+      <form action="/index" method="POST">
+        <div id="splash-input">
+          <input id="origin-field" placeholder={this.state.placeholder} onSubmit={this.changePlaceholder}/>
+        </div>
+      </form>
     );
   }
 
