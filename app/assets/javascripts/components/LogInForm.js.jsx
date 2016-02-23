@@ -38,10 +38,9 @@ var LogInForm = React.createClass({
   },
 
   render: function(){
-    otherThat = this;
     return (
       <div>
-        <button className="log-in-button" onClick={function() {otherThat.toggleLogInForm()}}>Log in</button>
+        <button className="log-in-button" onClick={this.toggleLogInForm}>Log in</button>
         {this.displayLogInForm()}
       </div>
     );
