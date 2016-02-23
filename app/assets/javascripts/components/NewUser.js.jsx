@@ -53,10 +53,9 @@ var NewUser = React.createClass({
   },
 
   render: function(){
-    that = this;
     return (
       <div>
-        <button className="sign-up-button" onClick={function() {that.toggleForm()}}>Sign up!</button>
+        <button className="sign-up-button" onClick={this.toggleForm}>Sign up!</button>
         {this.displayForm()}
       </div>
     );

@@ -7,7 +7,7 @@ var NavBar = React.createClass({
       <div className="nav-bar">
       	<PostRideForm />
         <NewUser />
-        <button className="log-in-button">Log In</button>
+        <LogInForm />
       </div>
     );
   }
