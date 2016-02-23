@@ -11,17 +11,18 @@ User.destroy_all
 boolean = [true, false]
 
 User.create(first_name: "Justin", last_name: "Arruda", email: "justin@arruda.com",
-    driver: true, passenger: true)
+    driver: true, passenger: true, password: "password")
 User.create(first_name: "Tessa", last_name: "Kruger", email: "tessa@kruger.com",
-    driver: false, passenger: true)
+    driver: false, passenger: true, password: "password")
 User.create(first_name: "Jas", last_name: "Der", email: "jas@der.com",
-    driver: true, passenger: false)
+    driver: true, passenger: false, password: "password")
 
 10.times do
   user = User.new
   user.first_name = Faker::Name.first_name
   user.last_name = Faker::Name.last_name
   user.email = Faker::Internet.email
+  user.password = "password"
   user.driver = boolean.sample
   user.passenger = boolean.sample
   user.save

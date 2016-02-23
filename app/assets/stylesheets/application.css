@@ -14,10 +14,3 @@
  *= require_self
  */
 
-.hidden {
-  display: none;
-}
-
-.view {
-  display: block;
-}

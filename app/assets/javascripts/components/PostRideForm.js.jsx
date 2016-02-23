@@ -16,7 +16,7 @@ var PostRideForm = React.createClass({
             <input type="number" name="seats" min="1" max="6" />
         </div>
         <div>
-        <input type="hidden" name="authenticity_token" value={this.props.authenticity_token} />
+        <input type="hidden" name="authenticity_token" value={ this.props.authenticity_token } />
         </div>
         <div>
           <button type="submit">Let&#39;s roll</button>
