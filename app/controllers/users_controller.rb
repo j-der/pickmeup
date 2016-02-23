@@ -21,13 +21,15 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to rides_path, notice: "Welcome to Pick Me Up, #{@user.first_name}! Buckle up, and let's go!"
     else
-      redirect_to rides_path, notice: "Sign up failed!"
+      redirect_to rides_path
+      puts "sign up failed"
     end
   end
 
   protected
 
   def user_params
+
     params.require(:user).permit(:email, :first_name, :last_name, :password, :password_confirmation, :authenticity_token)
   end
 
