@@ -1,8 +1,8 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Modal = require('react-modal');
+// var React = require('react');
+// var ReactDOM = require('react-dom');
+// var Modal = require('react-modal');
 
-var appElement = document.getElementById('postRide');
+// var appElement = document.getElementById('postRide');
 
 /*
 By default the modal is anchored to document.body. All of the following overrides are available.
@@ -13,19 +13,19 @@ Modal.setAppElement(appElement);
 * query selector - uses the first element found if you pass in a class.
 
 */
-Modal.setAppElement('#postRide');
+// Modal.setAppElement('#postRide');
 
 
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
-};
+// const customStyles = {
+//   content : {
+//     top                   : '50%',
+//     left                  : '50%',
+//     right                 : 'auto',
+//     bottom                : 'auto',
+//     marginRight           : '-50%',
+//     transform             : 'translate(-50%, -50%)'
+//   }
+// };
 
 var PostRideForm = React.createClass({
 
@@ -95,4 +95,4 @@ var PostRideForm = React.createClass({
 
 });
 
-ReactDOM.render(<PostRideForm/>, appElement);
+// ReactDOM.render(<PostRideForm/>, appElement);
