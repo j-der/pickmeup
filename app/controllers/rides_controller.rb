@@ -10,8 +10,7 @@ class RidesController < ApplicationController
 	end
 
 	def create
-		@ride = Ride.new(title: params[:title])
-
+		@ride = Ride.new(ride_params)
 		if @ride.save
     	render component: 'ParentComponent', props: { users: User.all }
     	return
