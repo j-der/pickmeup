@@ -1,6 +1,51 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .users {
   color: tomato;
+}
+
+.user-tweet {
+  background: lightblue;
+  height: 100px;
+  width: 500px;
+}
+
+#user-pic {
+  max-height: 100%;
+  float: left;
+}
+
+.nav-bar {
+  height: 80px;
+  background: lightblue;
+}
+
+.log-in-button {
+  display: block;
+  float: right;
+}
+
+.sign-up-button {
+  display: block;
+  float: right;
+}
+
+#origin-field {
+  display: block;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #eeeeee;
+  border-radius: 0;
+  background: none;
+  height: 60px;
+  width: 60%;
+  margin: auto;
+  position: absolute;
+  top: 70%;
+}
+
+#origin-field:focus {
+  outline: none;
 }
