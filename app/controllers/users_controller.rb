@@ -18,8 +18,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.avatar = params[:user][:avatar]
 
-
-
     if @user.save!
       session[:user_id] = @user.id
       redirect_to rides_path, notice: "Welcome to Pick Me Up, #{@user.first_name}! Buckle up, and let's go!"
