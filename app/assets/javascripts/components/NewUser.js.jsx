@@ -9,6 +9,9 @@ var NewUser = React.createClass({
       return (
         <form action="/users" method="POST" enctype="multipart/form-data">
           <div>
+            <input type="file" name="user[avatar]" />
+          </div>
+          <div>
             <label htmlFor="first_name">First name:</label>
             <input type="text" name="user[first_name]" id="first_name" placeholder="First name" />
           </div>
