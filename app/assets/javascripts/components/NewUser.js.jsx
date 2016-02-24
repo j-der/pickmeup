@@ -7,7 +7,10 @@ var NewUser = React.createClass({
   displayForm: function() {
     if (this.state.showForm) {
       return (
-        <form action="/users" method="POST">
+        <form action="/users" method="POST" encType="multipart/form-data">
+          <div>
+            <input type="file" name="user[avatar]" />
+          </div>
           <div>
             <label htmlFor="first_name">First name:</label>
             <input type="text" name="user[first_name]" id="first_name" placeholder="First name" />
@@ -60,6 +63,4 @@ var NewUser = React.createClass({
       </div>
     );
   }
-
-
-})
+});

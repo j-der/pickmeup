@@ -15,12 +15,13 @@ class UsersController < ApplicationController
   end
 
   def create
-
     @user = User.new(user_params)
+    @user.avatar = params[:user][:avatar]
 
-    if @user.save
+    if @user.save!
       session[:user_id] = @user.id
       redirect_to rides_path, notice: "Welcome to Pick Me Up, #{@user.first_name}! Buckle up, and let's go!"
+      puts "sign up successful"
     else
       redirect_to rides_path
       puts "sign up failed"
@@ -31,7 +32,7 @@ class UsersController < ApplicationController
 
   def user_params
 
-    params.require(:user).permit(:email, :first_name, :last_name, :password, :password_confirmation, :authenticity_token)
+    params.require(:user).permit(:email, :first_name, :last_name, :password, :password_confirmation, :avatar, :authenticity_token)
   end
 
 end

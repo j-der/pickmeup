@@ -8,6 +8,7 @@ var SplashPage = React.createClass({
       <div>
         <NavBar />
         <SearchBar />
+
       </div>
     );
   }

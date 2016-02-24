@@ -8,6 +8,7 @@ var NavBar = React.createClass({
       	<PostRideForm />
         <NewUser />
         <LogInForm />
+
       </div>
     );
   }
