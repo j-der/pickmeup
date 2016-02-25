@@ -52,5 +52,6 @@ group :development do
   gem 'carrierwave'
   gem 'rmagick'
   gem 'mini_magick'
+  gem 'rack-cors'
 end
 
