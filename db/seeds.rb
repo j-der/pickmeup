@@ -31,13 +31,23 @@ end
 Ride.destroy_all
 # , seats: 4, users_id: 5
 
-Ride.create(title: "shoppers world brampton to union station", origin_latitude: 43.665937, origin_longitude: -79.735601,
-    destination_latitude: 43.646253, destination_longitude: -79.380704)
-Ride.create(title: "Leslieville to Eaton Centre", origin_latitude: 43.666573, origin_longitude: -79.326289,
-    destination_latitude: 43.654687, destination_longitude: -79.380699)
-Ride.create(title: "mississauga to heart of Financial District", origin_latitude: 43.593136, origin_longitude: -79.642961,
-    destination_latitude: 43.648746, destination_longitude: -79.380275)
-Ride.create(title: "mississauga to heart of Financial District", origin_latitude: 43.593136, origin_longitude: -79.642961,
-    destination_latitude: 43.648746, destination_longitude: -79.380275)
-Ride.create(title: "Keele and Lawrence to Vaughn Mills", origin_latitude: 43.708807, origin_longitude: -79.477932,
-    destination_latitude: 43.827390, destination_longitude: -79.538783)
+Ride.create(title: "shoppers world brampton to union station", origin: "Shoppers World Brampton",
+    destination: "Union Station, Toronto", available_seats: 3)
+Ride.create(title: "Leslieville to Eaton Centre", origin: "Leslieville, Toronto",
+    destination: "Eaton Centre, Toronto", available_seats: 2)
+Ride.create(title: "mississauga to Financial District", origin: "Square One, Mississauga",
+    destination: "Financial District, Toronto", available_seats: 4)
+Ride.create(title: "Mavis and Rathburn to Rogers Centre", origin: "Mavis and Rathburn, Mississauga",
+    destination: "Rogers Centre, Toronto", available_seats: 1)
+Ride.create(title: "Keele and Lawrence to Vaughn Mills", origin: "Keele and Lawrence, Toronto",
+    destination: "Vaughn Mills, Vaughn",  available_seats: 3)
+Ride.create(title: "Barrie to Toronto", origin: "Barrie",
+    destination: "Toronto",  available_seats: 2)
+Ride.create(title: "Brampton to Toronto", origin: "Brampton",
+    destination: "Toronto",  available_seats: 5)
+Ride.create(title: "Etobicoke to Toronto", origin: "Etobicoke, ON",
+    destination: "Toronto",  available_seats: 2)
+Ride.create(title: "Mississauga to Toronto", origin: "Mississauga",
+    destination: "Toronto",  available_seats: 4)
+Ride.create(title: "Scarborough to Toronto", origin: "Scarborough, ON",
+    destination: "Toronto",  available_seats: 3)
