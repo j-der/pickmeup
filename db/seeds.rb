@@ -11,11 +11,11 @@ User.destroy_all
 boolean = [true, false]
 
 User.create(first_name: "Justin", last_name: "Arruda", email: "justin@arruda.com",
-    driver: true, passenger: true, password: "password")
+    driver: true, passenger: true, password: "password", avatar: "http://lorempixel.com/200/200/people")
 User.create(first_name: "Tessa", last_name: "Kruger", email: "tessa@kruger.com",
-    driver: false, passenger: true, password: "password")
+    driver: false, passenger: true, password: "password", avatar: "http://lorempixel.com/200/200/people")
 User.create(first_name: "Jas", last_name: "Der", email: "jas@der.com",
-    driver: true, passenger: false, password: "password")
+    driver: true, passenger: false, password: "password", avatar: "http://lorempixel.com/200/200/people")
 
 10.times do
   user = User.new
@@ -24,7 +24,7 @@ User.create(first_name: "Jas", last_name: "Der", email: "jas@der.com",
   user.email = Faker::Internet.email
   user.password = "password"
   user.driver = boolean.sample
-  user.passenger = boolean.sample
+  user.avatar = "http://lorempixel.com/200/200/people"
   user.save
 end
 

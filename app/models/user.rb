@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
-  mount_uploader :avatar, AvatarUploader
+  # mount_uploader :avatar, AvatarUploader
 
   has_many :rides
   has_many :seats
@@ -11,8 +11,8 @@ class User < ActiveRecord::Base
   validates :password, length: { in: 6..20 }, on: :create
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates_presence_of :avatar
-  validates_processing_of :avatar
+  # validates_presence_of :avatar
+  # validates_processing_of :avatar
 
 
 end
