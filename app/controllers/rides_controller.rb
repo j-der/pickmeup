@@ -10,21 +10,18 @@ class RidesController < ApplicationController
 
 	def create
 		@ride = Ride.new(ride_params)
-
-		if @ride.save
-    	redirect_to users_path, notice: "#{@ride.title} was posted successfully!"
-    	return
+		binding.pry
+		if @ride.save!
+    	render json: @ride
 		else
-			render :new
+			puts "shit be broken."
 		end
 	end
 
-	protected	
+	protected
 
 	def ride_params
-		params.require(:ride).permit(
-			:title, :details, :available_seats, :authenticity_token
-			)
+		params.require(:ride).permit(:origin, :destination, :title, :available_seats)
 	end
 
 end
