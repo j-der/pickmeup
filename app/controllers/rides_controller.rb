@@ -19,11 +19,11 @@ class RidesController < ApplicationController
 		end
 	end
 
-	protected	
+	protected
 
 	def ride_params
 		params.require(:ride).permit(
-			:title, :details, :available_seats, :authenticity_token
+			:origin, :destination, :title, :details, :available_seats, :authenticity_token
 			)
 	end
 
