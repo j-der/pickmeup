@@ -19,8 +19,8 @@ class UsersController < ApplicationController
 
     if @user.save!
       session[:user_id] = @user.id
-      redirect_to rides_path
 
+      render json: @user
       puts "sign up successful"
     else
       redirect_to rides_path
