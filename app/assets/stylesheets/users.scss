@@ -32,6 +32,24 @@
   float: right;
 }
 
+#destination-field {
+  display: block;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #eeeeee;
+  border-radius: 0;
+  background: none;
+  height: 60px;
+  width: 60%;
+  margin: auto;
+  position: absolute;
+  top: 70%;
+}
+
+#destination-field:focus {
+  outline: none;
+}
+
 #origin-field {
   display: block;
   box-shadow: none;

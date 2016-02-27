@@ -28,6 +28,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'react-rails', '~> 1.6.0'
 gem 'faker'
+gem 'geocoder'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
