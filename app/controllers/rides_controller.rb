@@ -2,6 +2,7 @@ class RidesController < ApplicationController
 
 	def index
 		@rides = Ride.all
+		render json: @rides
 	end
 
 	def new
@@ -12,6 +13,7 @@ class RidesController < ApplicationController
 		@ride = Ride.new(ride_params)
 		binding.pry
 		if @ride.save!
+			render json: @ride
     	puts "new ride saved"
 		else
 			puts "something's wrong"
