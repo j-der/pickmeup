@@ -1,7 +1,7 @@
 class RidesController < ApplicationController
 
 	def index
-		render component: 'PostRideForm', props: { ride: Ride.new }
+		@rides = Ride.all
 	end
 
 	def new
