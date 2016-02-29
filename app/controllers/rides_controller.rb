@@ -3,7 +3,6 @@ class RidesController < ApplicationController
 	def index
 		if params[:userDestination].present?
 			@rides = Ride.near(params[:userDestination], 10)
-			binding.pry
 		else
 			@rides = Ride.all
 		end
