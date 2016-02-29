@@ -11,14 +11,17 @@ class RidesController < ApplicationController
 
 	def create
 		@ride = Ride.new(ride_params)
-		binding.pry
 		if @ride.save!
 			render json: @ride
     	puts "new ride saved"
 		else
 			puts "something's wrong"
-			binding.pry
 		end
+	end
+
+	def show
+		@ride = Ride.find(params[:id])
+		render json: @ride
 	end
 
 	protected
