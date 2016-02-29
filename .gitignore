@@ -1,4 +1,5 @@
 .DS_Store
 log
 tmp
+npm-debug.log
 public/uploads/*

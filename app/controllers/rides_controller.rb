@@ -19,6 +19,11 @@ class RidesController < ApplicationController
 		end
 	end
 
+	def show
+		@ride = Ride.find(params[:id])
+		render json: @ride
+	end
+
 	protected
 
 	def ride_params
