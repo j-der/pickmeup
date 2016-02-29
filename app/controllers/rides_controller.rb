@@ -1,7 +1,11 @@
 class RidesController < ApplicationController
 
 	def index
-		@rides = Ride.all
+		# if params[:userDestination].present?
+		# 	@rides = Ride.near(params[:userDestination], 10, :order => :distance)
+		# else
+			@rides = Ride.all
+		# end
 		render json: @rides
 	end
 
@@ -11,13 +15,11 @@ class RidesController < ApplicationController
 
 	def create
 		@ride = Ride.new(ride_params)
-		binding.pry
 		if @ride.save!
 			render json: @ride
     	puts "new ride saved"
 		else
 			puts "something's wrong"
-			binding.pry
 		end
 	end
 
