@@ -1,7 +1,11 @@
 class RidesController < ApplicationController
 
 	def index
-		@rides = Ride.all
+		# if params[:userDestination].present?
+		# 	@rides = Ride.near(params[:userDestination], 10, :order => :distance)
+		# else
+			@rides = Ride.all
+		# end
 		render json: @rides
 	end
 
