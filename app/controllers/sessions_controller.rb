@@ -1,19 +1,13 @@
 class SessionsController < ApplicationController
 
-  def new
+  def login
+    if params[:user].present?
+      render json:
 
   end
 
   def create
-    user = User.find_by(email: params[:email])
 
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      render json: @user
-      console.log("logged in")
-    else
-
-    end
   end
 
   def destroy
