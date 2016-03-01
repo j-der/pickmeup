@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160226164044) do
+ActiveRecord::Schema.define(version: 20160229202319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20160226164044) do
     t.string   "authenticity_token"
     t.string   "origin"
     t.string   "destination"
+    t.float    "destination_lat"
+    t.float    "destination_lng"
   end
 
   add_index "rides", ["user_id"], name: "index_rides_on_user_id", using: :btree
