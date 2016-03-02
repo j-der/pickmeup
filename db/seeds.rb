@@ -34,13 +34,14 @@ Ride.create(title: "shoppers world brampton to union station", origin: "Shoppers
     destination: "Union Station, Toronto", available_seats: 3)
 Ride.create(title: "Leslieville to Eaton Centre", origin: "Leslieville, Toronto",
     destination: "Eaton Centre, Toronto", available_seats: 2)
+sleep(1)
 Ride.create(title: "mississauga to Financial District", origin: "Square One, Mississauga",
     destination: "Financial District, Toronto", available_seats: 4)
 Ride.create(title: "Mavis and Rathburn to Rogers Centre", origin: "Mavis and Rathburn, Mississauga",
     destination: "Rogers Centre, Toronto", available_seats: 1)
 Ride.create(title: "Keele and Lawrence to Vaughn Mills", origin: "Keele and Lawrence, Toronto",
     destination: "Vaughn Mills, Vaughn",  available_seats: 3)
-sleep(1) #added to avoid going over google query limit
+sleep(1)
 Ride.create(title: "Barrie to Toronto", origin: "Barrie",
     destination: "Toronto",  available_seats: 2)
 Ride.create(title: "Brampton to Toronto", origin: "Brampton",
@@ -56,6 +57,7 @@ Ride.create(title: "Burlington to CN Tower", origin: "Burlington, ON",
     destination: "CN Tower, Toronto",  available_seats: 2)
 Ride.create(title: "Burnhamthorpe and Mavis to Lawrence and Bathurst", origin: "Burnhamthorpe and Mavis, Mississauga, ON",
     destination: "Lawrence and Bathurst, Toronto, ON",  available_seats: 3)
+sleep(1)
 Ride.create(title: "Caledon, ON to Scarborough Town Centre ", origin: "Caledon, ON",
     destination: "Scarborough Town Centre, ON",  available_seats: 3)
 Ride.create(title: "Streetsville to Sauble Beach, ON", origin: "Streetsville, Mississauga",
