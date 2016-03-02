@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+  # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # Examples:
@@ -39,6 +39,7 @@ Ride.create(title: "shoppers world brampton to union station", origin: "Shoppers
     destination: "Union Station, Toronto", available_seats: 3, user_id: 1)
 
 Ride.create(title: "Leslieville to Eaton Centre", origin: "Leslieville, Toronto",
+
     destination: "Eaton Centre, Toronto", available_seats: 2, user_id: 2)
 
 Ride.create(title: "mississauga to Financial District", origin: "Square One, Mississauga",
@@ -74,6 +75,8 @@ Ride.create(title: "Burlington to CN Tower", origin: "Burlington, ON",
 
 Ride.create(title: "Burnhamthorpe and Mavis to Lawrence and Bathurst", origin: "Burnhamthorpe and Mavis, Mississauga, ON",
     destination: "Lawrence and Bathurst, Toronto, ON",  available_seats: 3, user_id: 12)
+
+sleep(1)
 
 Ride.create(title: "Caledon, ON to Scarborough Town Centre ", origin: "Caledon, ON",
     destination: "Scarborough Town Centre, ON",  available_seats: 3, user_id: 13)
