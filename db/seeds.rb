@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+  # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # Examples:
@@ -39,8 +39,8 @@ Ride.create(title: "shoppers world brampton to union station", origin: "Shoppers
     destination: "Union Station, Toronto", available_seats: 3, user_id: 1)
 
 Ride.create(title: "Leslieville to Eaton Centre", origin: "Leslieville, Toronto",
-    destination: "Eaton Centre, Toronto", available_seats: 2, user_id: 2)
-
+    destination: "Eaton Centre, Toronto", available_seats: 2)
+sleep(1)
 Ride.create(title: "mississauga to Financial District", origin: "Square One, Mississauga",
     destination: "Financial District, Toronto", available_seats: 4, user_id: 3)
 
@@ -48,10 +48,8 @@ Ride.create(title: "Mavis and Rathburn to Rogers Centre", origin: "Mavis and Rat
     destination: "Rogers Centre, Toronto", available_seats: 1, user_id: 4)
 
 Ride.create(title: "Keele and Lawrence to Vaughn Mills", origin: "Keele and Lawrence, Toronto",
-    destination: "Vaughn Mills, Vaughn",  available_seats: 3, user_id: 5)
-
+    destination: "Vaughn Mills, Vaughn",  available_seats: 3)
 sleep(1)
- #added to avoid going over google query limit
 Ride.create(title: "Barrie to Toronto", origin: "Barrie",
     destination: "Toronto",  available_seats: 2, user_id: 6)
 
@@ -73,8 +71,8 @@ Ride.create(title: "Burlington to CN Tower", origin: "Burlington, ON",
     destination: "CN Tower, Toronto",  available_seats: 2, user_id: 11)
 
 Ride.create(title: "Burnhamthorpe and Mavis to Lawrence and Bathurst", origin: "Burnhamthorpe and Mavis, Mississauga, ON",
-    destination: "Lawrence and Bathurst, Toronto, ON",  available_seats: 3, user_id: 12)
-
+    destination: "Lawrence and Bathurst, Toronto, ON",  available_seats: 3)
+sleep(1)
 Ride.create(title: "Caledon, ON to Scarborough Town Centre ", origin: "Caledon, ON",
     destination: "Scarborough Town Centre, ON",  available_seats: 3, user_id: 13)
 
