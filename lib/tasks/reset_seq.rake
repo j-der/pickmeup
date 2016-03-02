@@ -1,16 +1,8 @@
-# # require config enviro
-# #
-# #
-# namepsace :db do
+# require config enviro
+#
 
-# desc "initialize the database by dropping and resetting sequence"
-# task :init => environment do
+# desc "Reset db sequences"
+# task :reset_seq => environment do
 
-#   # something
-#   # db drop
-#   # reset seq
-#   # db create
-#   # migrate
-#   # seed
 # end
-# end
+

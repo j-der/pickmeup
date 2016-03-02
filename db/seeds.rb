@@ -5,6 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#
+#
+#   Run these two commands (in psql) after db:drop, db:create, db:migrate
+#   ALTER SEQUENCE rides_id_seq RESTART WITH 1;
+#   ALTER SEQUENCE rides_id_seq RESTART WITH 1;
 
 User.destroy_all
 
