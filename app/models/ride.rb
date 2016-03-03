@@ -3,8 +3,8 @@ class Ride < ActiveRecord::Base
   belongs_to :user
   has_many :seats
 
-  # geocoded_by :destination
-  # after_validation :geocode
+  geocoded_by :destination, :latitude  => :destination_lat, :longitude => :destination_lng
+  after_validation :geocode
 
   # validates :origin_latitude,
   #   presence: true,

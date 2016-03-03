@@ -2,7 +2,13 @@ Rails.application.routes.draw do
 
   root to: 'users#index'
 
-  resources :sessions, only: [:new, :create, :destroy]
+  resource :session do
+    member do
+      get :login
+      post :login
+    end
+  end
+
 
   resources :users
   resources :rides
