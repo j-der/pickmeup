@@ -29,7 +29,7 @@ User.create(first_name: "Jas", last_name: "Der", email: "jas@der.com",
   user.email = Faker::Internet.email
   user.password = "password"
   # user.driver = boolean.sample
-  user.avatar = ["http://lorempixel.com/200/200/people/", "http://lorempixel.com/200/200/people/", "http://lorempixel.com/200/200/people/", "http://lorempixel.com/200/200/people/"].sample
+  user.avatar = "http://lorempixel.com/200/200/people/"
   user.save
 end
 
