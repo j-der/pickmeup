@@ -4,7 +4,7 @@ class Ride < ActiveRecord::Base
   has_many :seats
 
   geocoded_by :destination, :latitude  => :destination_lat, :longitude => :destination_lng
-  after_validation :geocode
+  after_validation :geocode, if: ->(ride){ ride.destination.present? and ride.destination_changed? }
 
   # validates :origin_latitude,
   #   presence: true,
